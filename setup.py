@@ -16,7 +16,7 @@ setup(
     description = ("Simple module for scraping Google Play app search"),
     license = "http://www.gnu.org/licenses/gpl.html",
     keywords = "google play",
-    #url = "",
+    url = "https://github.com/smizell/python-googleplay",
     packages=['google_play'],
     long_description=read('README.md'),
     install_requires=['BeautifulSoup']
