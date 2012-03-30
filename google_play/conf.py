@@ -5,5 +5,6 @@ SEARCH_URL = '%s/store/search' % BASE_URL
 
 MEDIA = {
     'apps': 'apps',
-    'books': 'books'
+    'books': 'books',
+    'movies': 'movies',
 }

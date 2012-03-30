@@ -8,7 +8,7 @@ and added to this.
 ## About
 
 Currently, the following items are available for searching 
-books and apps in the Google Play store.
+apps, books and movies in the Google Play store.
 
 * Item name (name)
 * Description (description)
@@ -45,12 +45,13 @@ from google_play import GooglePlay
 
 ### Initialize the object
 
-The default media type is 'apps'. So far, only apps and books
-can be searched.
+The default media type is 'apps'. So far, only apps, books, and
+movies can be searched.
 
 ```python
-app_search = GooglePlay(search='angry birds')
+app_search = GooglePlay(search='angry birds', media='apps')
 book_search = GooglePlay(search='The Hobbit', media='books')
+movie_search = GooglePlay(search='Casablanca', media='movies')
 ```
 
 ### All results from first page
@@ -71,7 +72,7 @@ app = g.get_first()
 
 Please refer to the about section of this file to
 see what fields are available. To get the field for
-an App object, simply call get_attribute_name().
+an object, simply call get_attribute_name().
 
 ```python
 g = GooglePlay(search='angry birds')

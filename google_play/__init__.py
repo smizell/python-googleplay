@@ -6,7 +6,7 @@ from BeautifulSoup import BeautifulSoup
 from google_play.base import Item
 from google_play.conf import *
 from google_play.decorators import requires_fetch
-from google_play.items import App, Book
+from google_play.items import App, Book, Movie
 from google_play.utils import get_raw_html
 
 class Page(object):
@@ -19,6 +19,7 @@ class Page(object):
     item_types = {
         'apps': App,
         'books': Book,
+        'movies': Movie,
     }
 
     def __init__(self, page, query_string):

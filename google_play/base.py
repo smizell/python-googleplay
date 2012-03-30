@@ -64,8 +64,11 @@ class Item(object):
         self._thumbnail = thumbnail
 
     def _set_description(self, soup):
-        div = soup('div', {'class': 'doc-description toggle-overflow-contents'})[0]
-        self._description = div.contents[0]
+        try:
+            div = soup('div', {'class': 'doc-description toggle-overflow-contents'})[0]
+            self._description = div.contents[0]
+        except:
+            self._description = ""
 
     def _set_banner_icon(self, soup):
         div = soup('div', {'class': 'doc-banner-icon'})[0]
