@@ -13,7 +13,7 @@ setup(
     version = "0.1",
     author = "Stephen Mizell",
     author_email = "smizell@gmail.com",
-    description = ("Simple module for scraping Google Play app search"),
+    description = ("Simple module for scraping Google Play search"),
     license = "http://www.gnu.org/licenses/gpl.html",
     keywords = "google play",
     url = "https://github.com/smizell/python-googleplay",
