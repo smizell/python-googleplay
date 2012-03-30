@@ -1,15 +1,16 @@
-# Google Play App Search
+# Google Play Search
 
-This is a simple module for scraping the Google Play search
-for apps since there really isn't an API for it. There are 
+This is a simple module for scraping the Google Play
+search since there really isn't an API for it. There are 
 several additional pieces of information that could be scraped
 and added to this. 
 
 ## About
 
-Currently, the following items are available.
+Currently, the following items are available for searching 
+books and apps in the Google Play store.
 
-* App name (name)
+* Item name (name)
 * Description (description)
 * Url (url)
 * Price (price)
@@ -20,7 +21,7 @@ Hopefully in the future, this will pull in the ratings and
 links to screenshots.
 
 Also, this currently only pulls the results from the first
-page. Reason is this is used to find information for an app
+page. Reason is this is used to find information for an item
 and not for displaying search results. 
 
 ## Installation
@@ -44,8 +45,12 @@ from google_play import GooglePlay
 
 ### Initialize the object
 
+The default media type is 'apps'. So far, only apps and books
+can be searched.
+
 ```python
-g = GooglePlay(search='angry birds')
+app_search = GooglePlay(search='angry birds')
+book_search = GooglePlay(search='The Hobbit', media='books')
 ```
 
 ### All results from first page
@@ -55,14 +60,14 @@ g = GooglePlay(search='angry birds')
 g.get_first_page()
 ```
 
-### Get first app in the search
+### Get first item in the search
 
 ```python
 g = GooglePlay(search='angry birds')
 app = g.get_first()
 ```
 
-### Access the attributes for an app
+### Access the attributes for an item
 
 Please refer to the about section of this file to
 see what fields are available. To get the field for
