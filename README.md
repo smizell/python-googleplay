@@ -1,4 +1,4 @@
-# Google Play Search
+# Google Play App Search
 
 This is a simple module for scraping the Google Play search
 for apps since there really isn't an API for it. There are 
