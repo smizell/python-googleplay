@@ -42,7 +42,7 @@ class Search(unittest.TestCase):
 class BookSearch(Search):
 
     def setUp(self):
-        self.g = GooglePlay(search='The Betrayal', media='books')
+        self.g = GooglePlay(search='The Hobbit', media='books')
 
     def test_get_first(self):
         """
