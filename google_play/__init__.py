@@ -63,7 +63,7 @@ class Page(object):
 
     def _get_items(self):
         """
-        Gets the items for all the apps on the page
+        Gets the items for all the items on the page
         """
         soup = BeautifulSoup(self.raw_html)
         items = soup('li', {'class': 'search-results-item'})
@@ -71,7 +71,7 @@ class Page(object):
 
     def get_all(self):
         """
-        Gets all the apps on the page
+        Gets all the items on the page
         """
         item_list = []
 

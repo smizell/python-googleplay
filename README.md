@@ -71,13 +71,17 @@ app = g.get_first()
 ### Access the attributes for an item
 
 Please refer to the about section of this file to
-see what fields are available. To get the field for
-an object, simply call get_attribute_name().
+see what fields are available.
 
 ```python
 g = GooglePlay(search='angry birds')
 app = g.get_first()
 
-app.get_name()
-app.get_thumbnail()
+app.name
+app.thumbnail
+app.description
 ```
+
+Note: Description is a field that is only on the details page. Since
+it may not be needed, the details page is not fetched unless the
+attribute is called. This saves a lot of page calls.
